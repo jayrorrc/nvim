@@ -22,7 +22,8 @@ local plugins = {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
-  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
 }
 
 local opts = {}
@@ -40,3 +41,11 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+local configs = require("nvim-treesitter.configs")
+
+configs.setup({
+  ensure_installed = { "lua", "javascript", "html", "css", "scss",  "java" },
+  sync_install = false,
+  highlight = { enable = true },
+  indent = { enable = true },  
+})
