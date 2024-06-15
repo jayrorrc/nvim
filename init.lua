@@ -16,7 +16,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {}
+local plugins = {
+  { "rebelot/kanagawa.nvim", name="kanagawa", priority=1000 }
+}
 local opts = {}
 
 require("lazy").setup(plugins, opts)
+
+require("kanagawa").setup()
+vim.cmd.colorscheme "kanagawa"
+
