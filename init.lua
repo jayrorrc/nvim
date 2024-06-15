@@ -17,13 +17,25 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-  { "rebelot/kanagawa.nvim", name="kanagawa", priority=1000 },
+  { "rebelot/kanagawa.nvim", lazy = false, name="kanagawa", priority=1000 },
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',
-    dependencies = { 'nvim-lua/plenary.nvim' }
+    dependencies = {
+      {'nvim-lua/plenary.nvim'},
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    }
   },
-  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+      "3rd/image.nvim",
+    }
+  }
 }
 
 local opts = {}
@@ -34,7 +46,6 @@ require("kanagawa").setup()
 vim.cmd.colorscheme "kanagawa"
 
 require('telescope').load_extension('fzf')
-
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
@@ -49,3 +60,8 @@ configs.setup({
   highlight = { enable = true },
   indent = { enable = true },  
 })
+
+vim.keymap.set('n', '<leader>t', ":Neotree filesystem reveal left<CR>", {})
+
+
+
