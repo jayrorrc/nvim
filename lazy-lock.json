@@ -1,4 +1,5 @@
 {
+  "alpha-nvim": { "branch": "main", "commit": "41283fb402713fc8b327e60907f74e46166f4cfd" },
   "image.nvim": { "branch": "master", "commit": "a2a0849e0b3dbed90f9283603cedb683bda5d4d1" },
   "kanagawa": { "branch": "master", "commit": "fe5b2c9e2549862c3dc3f3c8e9cf7ddece0f40c2" },
   "lazy.nvim": { "branch": "main", "commit": "4c6479e98ad643cd584e9e7c4095c463e0d810eb" },
