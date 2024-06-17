@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "cssls", "dockerls", "html", "jsonls", "tsserver" },
+				ensure_installed = { "lua_ls", "cssls", "dockerls", "html", "jdtls",  "jsonls", "tsserver" },
 			})
 		end,
 	},
@@ -23,6 +23,7 @@ return {
 			lspconfig.dockerls.setup({})
 			lspconfig.html.setup({})
 			lspconfig.jsonls.setup({})
+			lspconfig.jdtls.setup({})
 			lspconfig.tsserver.setup({})
 
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
