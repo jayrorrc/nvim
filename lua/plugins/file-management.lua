@@ -9,9 +9,9 @@ return {
 			"3rd/image.nvim",
 		},
 		config = function()
-			vim.keymap.set("n", "t", ":Neotree filesystem reveal left<CR>", {})
-			vim.keymap.set("n", "<leader>to", ":Neotree buffers<CR>", {})
-			vim.keymap.set("n", "<leader>ts", ":Neotree git_status<CR>", {})
+			vim.keymap.set("n", "f", ":Neotree filesystem reveal left<CR>", {})
+			vim.keymap.set("n", "<leader>fo", ":Neotree buffers<CR>", {})
+			vim.keymap.set("n", "<leader>fs", ":Neotree git_status<CR>", {})
 		end,
 	},
 	{
