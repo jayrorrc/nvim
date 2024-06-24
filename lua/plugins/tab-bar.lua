@@ -14,8 +14,8 @@ return {
 	config = function()
 		require("barbar").setup()
 		-- Move to previous/next
-		vim.keymap.set("n", "<Tab>", ":BufferPrevious<CR>", {})
-		vim.keymap.set("n", "<S-Tab>", ":BufferNext<CR>", {})
+		vim.keymap.set("n", "<S-Tab>", ":BufferPrevious<CR>", {})
+		vim.keymap.set("n", "<Tab>", ":BufferNext<CR>", {})
 		vim.keymap.set("n", "<leader>bc", ":BufferClose<CR>", {})
 	end,
 }
