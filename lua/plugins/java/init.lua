@@ -21,8 +21,6 @@ return {
         },
       },
     },
-    config = function()
-      require("java").setup()
-    end,
+    opts={}
   },
 }
