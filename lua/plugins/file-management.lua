@@ -7,31 +7,15 @@ return {
 			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
 			"3rd/image.nvim",
-			"saifulapm/neotree-file-nesting-config",
 		},
 		opts = {
-			hide_root_node = true,
-			retain_hidden_root_indent = true,
 			filesystem = {
 				follow_current_file = { enabled = true },
 				use_libuv_file_watcher = true,
-				filtered_items = {
-					never_show = {
-						".DS_Store",
-					},
-				},
-				default_component_configs = {
-					indent = {
-						with_expanders = true,
-						expander_collapsed = "",
-						expander_expanded = "",
-					},
-				},
 			},
 		},
 		config = function()
 			require("neo-tree").setup({
-				nesting_rules = require("neotree-file-nesting-config").nesting_rules,
 				enable_git_status = true,
 				default_component_configs = {
 					name = {
