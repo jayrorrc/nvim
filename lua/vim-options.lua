@@ -6,8 +6,8 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 
-vim.keymap.set("n", "<leader>tn", ":tabn<CR>", {})
-vim.keymap.set("n", "<leader>tp", ":tabp<CR>", {})
+--vim.keymap.set("n", "<leader>tn", ":tabn<CR>", {})
+--vim.keymap.set("n", "<leader>tp", ":tabp<CR>", {})
 
 vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", {})
 vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", {})

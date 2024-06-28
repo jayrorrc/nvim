@@ -100,10 +100,15 @@ return {
         capabilities = capabilities,
       })
 
-      vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+      vim.keymap.set("n", "<leader>lD", vim.lsp.buf.declaration, {})
+      vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, {})
+      vim.keymap.set("n", "<leade>lh", vim.lsp.buf.hover, {})
+      vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, {})
+      vim.keymap.set("n", "<leader>li", vim.lsp.buf.implementation, {})
+      vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, {})
+      vim.keymap.set("n", "<leader>lc", vim.lsp.buf.incoming_calls, {})
+      vim.keymap.set("n", "<leader>lo", vim.lsp.buf.outgoing_calls, {})
+      vim.keymap.set("n", "<leader>lR", vim.lsp.buf.rename, {})
     end,
   },
 }
