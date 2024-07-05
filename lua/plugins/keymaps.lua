@@ -104,7 +104,6 @@ return {
 				name = "search",
 				f = { "<cmd>Telescope menufacture find_files<CR>", "Search files" },
 				g = { "<cmd>Telescope menufacture live_grep<CR>", "Search grep" },
-				i = { "<cmd>set list!<CR>", "Toggle show invisible caracters" },
 			},
 		}, { prefix = "" })
 
@@ -120,21 +119,10 @@ return {
 			},
 		}, { prefix = "<leader>" })
 
-		-- wk.register({
-		-- 	name = "tmux/nvim navigate",
-		-- 	["C-h"] = { "<cmd>TmuxNavigateLeft<CR>", "Move to left" },
-		-- 	["C-j"] = { "<cmd>TmuxNavigateDown<CR>", "Move down" },
-		-- 	["C-k"] = { "<cmd>TmuxNavigateUp<CR>", "Move up" },
-		-- 	["C-l"] = { "<cmd>TmuxNavigateRight<CR>", "Move to right" },
-		-- }, { prefix = "" })
-
 		wk.register({
 			name = "vim",
-			-- ["<C-h>"] = { "<cmd>wincmd h<CR>", "Move to left" },
-			-- ["<C-j>"] = { "<cmd>wincmd j<CR>", "Move down" },
-			-- ["<C-k>"] = { "<cmd>wincmd k<CR>", "Move up" },
-			-- ["<C-l>"] = { "<cmd>wincmd l<CR>", "Move to right" },
 			["<F3>"] = { "<cmd>set hlsearch!<CR>", "Unselect" },
+			["<F4>"] = { "<cmd>set list!<CR>", "Toggle show invisible caracters" },
 		}, { prefix = "" })
 
 		wk.register({
