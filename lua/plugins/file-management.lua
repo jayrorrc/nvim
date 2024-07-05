@@ -55,11 +55,6 @@ return {
 					},
 				},
 			})
-
-			vim.keymap.set("n", "f", ":Neotree filesystem reveal left<CR>", {})
-			vim.keymap.set("n", "<leader>ft", ":Neotree toggle<CR>", {})
-			vim.keymap.set("n", "<leader>fo", ":Neotree buffers<CR>", {})
-			vim.keymap.set("n", "<leader>fs", ":Neotree git_status<CR>", {})
 		end,
 	},
 	{
