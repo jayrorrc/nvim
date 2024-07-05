@@ -104,6 +104,7 @@ return {
 				name = "search",
 				f = { "<cmd>Telescope menufacture find_files<CR>", "Search files" },
 				g = { "<cmd>Telescope menufacture live_grep<CR>", "Search grep" },
+				i = { "<cmd>set list!<CR>", "Toggle show invisible caracters" },
 			},
 		}, { prefix = "" })
 
