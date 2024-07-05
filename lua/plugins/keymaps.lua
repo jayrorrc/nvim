@@ -135,5 +135,11 @@ return {
 			-- ["<C-l>"] = { "<cmd>wincmd l<CR>", "Move to right" },
 			["<F3>"] = { "<cmd>set hlsearch!<CR>", "Unselect" },
 		}, { prefix = "" })
+
+		wk.register({
+			n = {
+				name = "navigation",
+			},
+		}, { prefix = "<leader>" })
 	end,
 }
