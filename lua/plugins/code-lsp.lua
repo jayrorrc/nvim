@@ -15,9 +15,9 @@ return {
 				"github:mason-org/mason-registry",
 			},
 		},
-		--config = function()
-		--	require("mason").setup()
-		--end,
+		-- config = function()
+		-- 	require("mason").setup()
+		-- end,
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",

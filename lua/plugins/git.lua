@@ -1,14 +1,30 @@
 return {
-	{
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			local gitsigns = require("gitsigns")
-			gitsigns.setup({
-				current_line_blame = true,
-			})
-		end,
-	},
-	{
-		"tpope/vim-fugitive",
-	},
+  "tpope/vim-fugitive",
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      local gitsigns = require("gitsigns")
+      gitsigns.setup({
+        current_line_blame = true,
+      })
+    end,
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("telescope").load_extension("lazygit")
+    end,
+  },
 }
