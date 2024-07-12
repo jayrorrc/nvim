@@ -1,7 +1,9 @@
 return {
-	"vim-test/vim-test",
-	dependencies = {
-		"preservim/vimux",
-	},
-	vim.cmd("let test#strategy = 'vimux'"),
+  "vim-test/vim-test",
+  dependencies = {
+    "preservim/vimux",
+  },
+  config = function()
+    vim.cmd("let test#strategy = 'vimux'")
+  end,
 }
