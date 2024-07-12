@@ -117,7 +117,7 @@ return {
         S = { "<cmd>Gitsigns stage_buffer<CR>", "Git stage file" },
         R = { "<cmd>Gitsigns reset_buffer<CR>", "Git reset file" },
         g = { "<cmd>LazyGit<CR>", "LazyGit" },
-        m = {"<cmd>Telescope git_submodules<CR>", "LazyGit submodule"}
+        m = { "<cmd>Telescope git_submodules<CR>", "LazyGit submodule" },
       },
     }, { prefix = "<leader>" })
 

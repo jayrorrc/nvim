@@ -10,7 +10,7 @@ return {
       },
       {
         "agoodshort/telescope-git-submodules.nvim",
-        dependencies = "akinsho/toggleterm.nvim",
+        dependencies = { "akinsho/toggleterm.nvim" },
       },
     },
     config = function()

@@ -1,6 +1,5 @@
 return {
 	"nvim-java/nvim-java",
-	-- enabled = false,
 	dependencies = {
 		"nvim-java/lua-async-await",
 		"nvim-java/nvim-java-refactor",
