@@ -5,6 +5,7 @@ vim.cmd("set shiftwidth=2")
 
 vim.cmd("set number")
 vim.cmd("set relativenumber")
+vim.cmd("set cursorline")
 
 vim.cmd('inoremap <C-v> <ESC>"+pa')
 vim.cmd('vnoremap <C-c> "+y')
